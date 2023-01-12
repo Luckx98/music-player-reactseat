@@ -1,0 +1,15 @@
+<div class="query-container">
+  <div class="query-playlist">
+    <div *ngFor="let music of musicPlay" class="query-content">
+      <div class="basic-informantions">
+        <div class="image"></div>
+        <div class="informantion">
+          <span class="music-title">{{ music.musicName }}</span>
+          <span class="music-subtitle">{{ music.musicArtist }}</span>
+        </div>
+      </div>
+
+      <span class="duration">{{ music.finalDuration }}</span>
+    </div>
+  </div>
+</div>

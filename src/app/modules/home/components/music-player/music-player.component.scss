@@ -1,0 +1,59 @@
+@mixin textFonts($color, $weight, $size) {
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+.music-container {
+    width: 266px;
+    height: 498px;
+
+    background: #2a2141;
+    border-radius: 10px;
+
+    .contents {
+        display: flex;
+        flex-direction: column;
+        padding: 38px;
+
+        .image {
+            width: 189px;
+            height: 189px;
+            margin-top: 12px;
+
+            background-color: #e1e1e6;
+            border-radius: 6px;
+        }
+
+        .title {
+            @include textFonts(#e1e1e6, 700, 24px);
+            margin: 28px 0 10px 0;
+        }
+
+        .subtitle {
+            @include textFonts(#e1e1e6, 400, 18px);
+        }
+
+        .music-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 28px 0;
+
+            .return-music,
+            .play,
+            .next-music {
+                width: 28px;
+                height: 28px;
+                background-color: #e1e1e6;
+            }
+        }
+
+        .music-slide {
+            width: 189px;
+            height: 38px;
+            background-color: #e1e1e6;
+            margin-bottom: 12px;
+        }
+    }
+}
